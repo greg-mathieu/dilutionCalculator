@@ -6,72 +6,129 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/editTextRequiredDose"
-        android:layout_width="151dp"
-        android:layout_height="37dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:text="Name"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="@+id/textView" />
-
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewRequiredDose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="128dp"
         android:text="Dosage requis"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView2"
+    <EditText
+        android:id="@+id/editTextRequiredDose"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewRequiredDose"
+        app:layout_constraintEnd_toStartOf="@+id/buttonUnitRequiredDose"
+        app:layout_constraintStart_toEndOf="@+id/textViewRequiredDose"
+        app:layout_constraintTop_toTopOf="@+id/textViewRequiredDose" />
+
+
+    <Button
+        android:id="@+id/buttonUnitRequiredDose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewRequiredDose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewRequiredDose" />
+
+    <TextView
+        android:id="@+id/textViewConcentration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
         android:text="Concentration"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toStartOf="@+id/textViewRequiredDose"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRequiredDose" />
 
     <EditText
         android:id="@+id/editTextConcentration"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="numberDecimal"
-        android:text="Name"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="@+id/textView2" />
+        app:layout_constraintBottom_toBottomOf="@+id/textViewConcentration"
+        app:layout_constraintEnd_toEndOf="@+id/editTextRequiredDose"
+        app:layout_constraintStart_toStartOf="@+id/editTextRequiredDose"
+        app:layout_constraintTop_toTopOf="@+id/textViewConcentration" />
+
+    <Button
+        android:id="@+id/buttonUnitConcentration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewConcentration"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewConcentration" />
+
+    <TextView
+        android:id="@+id/textViewTotalVolume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Volume Total"
+        app:layout_constraintStart_toStartOf="@+id/textViewConcentration"
+        app:layout_constraintTop_toBottomOf="@+id/textViewConcentration" />
 
     <EditText
         android:id="@+id/editTextTotalVolume"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="numberDecimal"
-        android:text="Name"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toTopOf="@+id/textView3" />
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTotalVolume"
+        app:layout_constraintEnd_toEndOf="@+id/editTextConcentration"
+        app:layout_constraintStart_toStartOf="@+id/editTextConcentration"
+        app:layout_constraintTop_toTopOf="@+id/textViewTotalVolume" />
 
-    <TextView
-        android:id="@+id/textView3"
+
+    <Button
+        android:id="@+id/buttonUnitTotalVolume"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Volume Total"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTotalVolume"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewTotalVolume" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textViewResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="64dp"
         android:text="Résultat"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintStart_toStartOf="@+id/textViewTotalVolume"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTotalVolume" />
+
+
+    <EditText
+        android:id="@+id/editTextResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewResult"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTotalVolume"
+        app:layout_constraintStart_toStartOf="@+id/editTextTotalVolume"
+        app:layout_constraintTop_toTopOf="@+id/textViewResult" />
+
+    <Button
+        android:id="@+id/buttonUnitResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewResult" />
 
     <Button
         android:id="@+id/buttonCompute"
@@ -81,14 +138,16 @@
         android:text="Calculer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewResult" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextResult" />
 
-    <TextView
-        android:id="@+id/textViewResult"
-        android:layout_width="62dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="24dp"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toTopOf="@+id/textView4"
-        tools:text="resultat" />
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Effacer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
