@@ -16,10 +16,10 @@ class MainActivity : AppCompatActivity() {
         buttonCompute.setOnClickListener(View.OnClickListener {
             val requiredDose = editTextRequiredDose.text.toString().toDouble()
             val concentration = editTextConcentration.text.toString().toDouble()
-            val totalVolume = editTextTotalVolume.toString().toDouble()
+            val totalVolume = editTextTotalVolume.text.toString().toDouble()
 
-            val result = (totalVolume * requiredDose) / concentration
-            editTextResult.setText(result.toString())
+            val calculation = Calculation().requiredDose(requiredDose).concentration(concentration).totalVolume(totalVolume)
+            editTextResult.setText(calculation.compute().toString())
 
             hideKeyboard()
         })
