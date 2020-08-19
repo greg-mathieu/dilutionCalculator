@@ -2,12 +2,15 @@ package com.mgregoire.dilutioncalculator
 
 class Calculation() {
 
-    var requiredDose : Double = 0.0
-    var concentration : Double = 0.0
-    var totalVolume : Double = 0.0
+    private var requiredDose : Double = 0.0
+    private var concentration : Double = 0.0
+    private var totalVolume : Double = 0.0
 
-    fun compute(): Double {
-        return (totalVolume * requiredDose) / concentration
+    fun compute(): String {
+        if (totalVolume == 0.0 && concentration == 0.0 && totalVolume == 0.0 )
+            return ((totalVolume * requiredDose) / concentration).toString()
+        else
+            return "No result"
     }
 
     fun requiredDose(dose: Double): Calculation {
